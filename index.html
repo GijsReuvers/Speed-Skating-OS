@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mijn plots</title>
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 24px; }
+    .plot { max-width: 900px; height: 480px; }
+  </style>
+</head>
+<body>
+  <h1>Mijn plots</h1>
+
+  <h2>Plot 1</h2>
+  <div id="plot1" class="plot"></div>
+
+  <script>
+    const trace = {
+      x: [1,2,3,4,5],
+      y: [1,4,9,16,25],
+      mode: "lines+markers",
+      name: "kwadraat"
+    };
+
+    const layout = { margin: { t: 20 } };
+
+    Plotly.newPlot("plot1", [trace], layout, {responsive: true});
+  </script>
+</body>
+</html>
